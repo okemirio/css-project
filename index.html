@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>ACME</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .product {
+        background-color: black;
+        color: aliceblue;
+        border-radius: 10px;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+      }
+      .button {
+        background-color: rgb(199, 33, 33);
+        width: 200px;
+        color: aliceblue;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 20px;
+        border: 50px;
+      }
+      .jax {
+        background-color: black;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #jax1 {
+        color: aliceblue;
+      }
+      .list {
+        background-color: rgb(199, 33, 33);
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      li {
+        list-style: none;
+        color: aliceblue;
+      }
+      .john {
+        display: flex;
+        align-items: center;
+        color: aliceblue;
+        gap: 30px;
+      }
+      a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      .products {
+        display: flex;
+        justify-content: row;
+        align-items: center;
+        gap: 40px;
+        margin-left: 20px;
+      }
+      .text1 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 120px;
+        margin-left: 30px;
+      }
+
+      .tom {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .image {
+        background-color: rgb(15, 168, 117);
+        background-image: url(https://media.istockphoto.com/id/1131849289/photo/disability-strong-man-free-rock-climbing.jpg?s=612x612&w=0&k=20&c=PmaetehiY2Wsy63DsNdUreIn6mP3iQariNLDTSocTbo=);
+        margin-top: 100px;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #image-1 {
+        color: aliceblue;
+        padding-top: 200px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-left: 100px;
+      }
+      .stylo {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+      }
+      #image-2 {
+        color: aliceblue;
+        padding-top: 200px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-left: 800px;
+      }
+      .buttons {
+        background-color: transparent;
+        width: 150px;
+        height: 30px;
+        color: white;
+        font-weight: 300;
+        border: 1px white solid;
+        margin-top: 20px;
+        font-size: 19px;
+      }
+      #cov0 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        font-style: normal;
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+      #cov1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        font-style: normal;
+        margin-left: 40px;
+      }
+      #cov3 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        font-style: normal;
+        margin-left: 40px;
+        padding-left: 40px;
+      }
+      .cov {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 100px;
+        padding-right: 200px;
+      }
+      .mountain {
+        background-image: url(https://media.istockphoto.com/id/1192479508/photo/hiker-walks-along-mountain-ridge-at-sunrise.jpg?s=612x612&w=0&k=20&c=6YFxxegcUB4df4Te3urDRXDaDQZHc_mb3sD6Y73F3Bc=);
+        margin-top: 100px;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .buttons1 {
+        border: 2px solid transparent;
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        font-style: normal;
+        margin-left: 40px;
+      }
+
+      .shop {
+        margin-top: 30px;
+      }
+      .shop #shop1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        font-style: normal;
+        margin-left: 40px;
+      }
+      .shop #shop2 {
+        margin-top: 3px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        font-style: normal;
+        margin-left: 40px;
+      }
+      .dimage {
+        display: flex;
+      }
+      #dimage1 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        border: 1px solid transparent;
+      }
+      #dimage-1 {
+        margin-top: 20px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        font-style: normal;
+        margin-left: 40px;
+      }
+
+      #buttons2 {
+        color: aliceblue;
+        margin-top: 30px;
+        height: 40px;
+        width: 150px;
+        border-radius: 10px;
+        background-color: brown;
+      }
+      #buttons2:hover {
+        background-color: black;
+      }
+      #buttons3 {
+        color: aliceblue;
+        margin-top: 30px;
+        height: 40px;
+        width: 200px;
+        border-radius: 10px;
+        background-color: rgb(17, 14, 14);
+        margin-left: 45%;
+        margin-top: 50px;
+      }
+      #buttons3:hover {
+        background-color: brown;
+      }
+      .shop-local {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: aliceblue;
+        display: flex;
+        
+      }
+
+      .shop-3 {
+        width: 50%;
+        height: auto;
+      }
+      li :hover {
+        background-color: black;
+        border: 4px solid black;
+        width: 40px;
+      }
+      .shop-2 {
+        width: 50%;
+        background-color: black;
+        border: 1px solid black;
+        align-items: center;
+        padding: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="tom">
+        <div class="jax">
+          <p id="jax1">
+            <button class="button">
+              <a target="_self" href="announcement.html">Announcement</a>
+            </button>
+            <a href="announcement.html">How were responding to COVID-19</a>
+          </p>
+        </div>
+        <div class="VAL">
+          <div class="list">
+            <div>
+              <a href="index.html">
+                <img
+                  src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <!-- navigation bar -->
+            <nav>
+              <ul class="john">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- introduction of the cart logo and styling -->
+                <li
+                  style="
+                    border: 1px solid black;
+                    height: 30px;
+                    background-color: black;
+                  "
+                >
+                  <a href="cart.html">
+                    <img
+                      src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e86146bb854797d12a30a13_cart.svg"
+                      width="30px"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="image">
+      <div id="image-1">
+        <p style="font-size: 50px; font-weight: 900">Serving you since 1989.</p>
+        <p class="stylo" style="font-weight: 900px">
+          Acme Outdoors is an outdoor and adventure <br />shop located in the
+          Boathouse District <br />in Oklahoma City.
+        </p>
+        <button class="buttons">shop merch</button>
+      </div>
+    </div>
+
+    <!-- the text below the background image -->
+    <div class="cov">
+      <div class="cov1">
+        <p id="cov0">WAYS TO SUPPORT</p>
+        <p id="cov1">Support Acme Outdoors.</p>
+      </div>
+
+      <div id="cov2">
+        <p id="cov3">
+          COVID-19 has forced us to close our retail space, but we need
+          <br />support from patrons like yourself now more than ever. <br />
+          Below, we’ve listed the best ways to help us through this season.
+        </p>
+      </div>
+    </div>
+    ?
+    <!-- the designs below the images  -->
+    <div class="products">
+      <div class="product" id="main-1">
+        <h1>01</h1>
+        <h2>SHOP PRODUCT</h2>
+      </div>
+
+      <div class="product" id="main2">
+        <h1>02</h1>
+        <h2>SHOP</h2>
+      </div>
+
+      <div class="product" id="main-2">
+        <h1>03</h1>
+        <h2>BUY GIFTCARD</h2>
+      </div>
+    </div>
+    <!-- the text below the designs -->
+    <div class="text1">
+      <div>
+        <p>Our full product line is still available online</p>
+        <p>here on our site! Getting outside and hiking</p>
+        <p>is still something you can do. Get your gear now!</p>
+      </div>
+      <div>
+        <p>Since we've changed the way we operate to online</p>
+        <p>only, and to ensure your safety, not all our staff</p>
+        <p>is working. Donate to keep them afloat.</p>
+      </div>
+      <div>
+        <p>Have all the outdoor gear you need for now?</p>
+        <p>Buy a gift card and use it later or share it</p>
+        <p>with friends and family.</p>
+      </div>
+    </div>
+
+    <!-- the second background image -->
+    <div>
+      <div class="mountain">
+        <div id="image-2">
+          <p style="font-size: 50px">
+            How we're keeping you safe during <b>COVID-19 </b>
+          </p>
+          <div class="stylo">
+            <p>As an outdoor shop, we’ve taken precautionary</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; measures to ensure the safety
+              of all our
+            </p>
+            <p>
+              &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              customers and team members.
+            </p>
+          </div>
+          <div>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="buttons1">Read Our Statement</button>
+          </div>
+        </div>
+      </div>
+      <!--  image after the second background -->
+      <div class="shop">
+        <h4 id="shop1">SHOP PRODUCTS</h4>
+        <h3 id="shop2"><b>Open 24/7/365.</b></h3>
+      </div>
+      <!-- images outlined in rows with hover button effect -->
+      <div class="dimage">
+        <div id="dimage1">
+          <a href="">
+            <img
+              style="height: 500px; width: 400px; border-radius: 5px"
+              src="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </a>
+          <div id="dimage-1">
+            <h4><a style="color: black" href="">White Tent</a></h4>
+            <h4><a style="color: rgb(8, 8, 8)" href="">$ 200.00 USD</a></h4>
+            <div>
+              <button id="buttons2">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="dimage1">
+          <img
+            style="height: 500px; width: 400px; border-radius: 5px"
+            src="https://images.unsplash.com/photo-1489693755295-4a1efc9e7f72?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <div id="dimage-1">
+            <h4><a style="color: black" href="">Tin Coffee Tumbler</a></h4>
+            <h4><a style="color: rgb(8, 8, 8)" href="">$ 35.00 USD</a></h4>
+            <div>
+              <button id="buttons2">Details</button>
+            </div>
+          </div>
+        </div>
+        <div id="dimage1">
+          <img style="height: 500px; width: 400px; border-radius: 5px;""
+          src="https://assets-global.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg"
+          alt="">
+          <div id="dimage-1">
+            <h4><a style="color: black" href="">Blue Canvas Pack</a></h4>
+            <h4>
+              <a style="color: rgb(8, 8, 8)" href=""
+                >$ 95.00 USD&nbsp;
+                <span style="text-decoration: line-through; color: brown"
+                  >$ 95.00 USD</span
+                >
+              </a>
+            </h4>
+            <div>
+              <button id="buttons2">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="buttons3">view ALL products</button>
+
+      <!-- shop local -->
+      <div>
+        <div class="shop-local">
+          <div class="shop-3">
+            <img
+              height="100%"
+              width="100%"
+              src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*Gahhe_d1jqOrfmWRJHM_vg.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="shop-2">
+            <h2
+              style="padding-left: 80px; padding-bottom: 30px; font-weight: 700"
+            >
+              Shop Local.
+            </h2>
+            <div>
+              <p style="padding-bottom: 20px">
+                We know that during COVID-19, a lot of folks around the city and
+                state are feeling uneasy about the future - we’re not sure what
+                the future holds either.
+              </p>
+              <p style="padding-bottom: 20px">
+                That said: we know that we love making sure you have the gear
+                you need for your adventures, and we’re going to keep doing that
+                - with our team - until the city tells us we can’t.
+              </p>
+              <p style="padding-bottom: 20px">
+                But as long as folks like yourself support small businesses
+                around the city, then we’ll be here — every day, making sure
+                your orders arrive on time.
+              </p>
+              <p style="padding-bottom: 20px">-------</p>
+              <p>Jane & John DoeSS</p>
+              <p>Acme Outdoors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- footer -->
+    <footer>
+      <div
+        style="
+          border: 1px solid black;
+          background-color: black;
+          color: aliceblue;
+          display: flex;
+          gap: 1100px;
+          margin-top: 40px;
+          padding-top: 80px;
+          padding-left: 20px;
+        "
+        class="foot1"
+      >
+        <div>
+          <h2><a style="color: rgb(255, 241, 241)" href="">ACME</a></h2>
+        </div>
+
+        <div style="display: flex; gap: 20px" class="icons">
+          <a style="color: rgb(248, 238, 238)" href=""
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <!-- Facebook icon -->
+          <a style="color: rgb(248, 236, 236)" href=""
+            ><i class="fab fa-whatsapp fa-2x"></i
+          ></a>
+          <!-- WhatsApp icon -->
+          <a style="color: rgb(241, 234, 234)" href=""
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <!-- Instagram icon -->
+        </div>
+      </div>
+      <p
+        style="
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          color: aliceblue;
+        "
+      >
+        Made In <span style="color: brown">Webflow.</span>
+        <span>&copy; 2020.</span>
+      </p>
+    </footer>
+  </body>
+</html>

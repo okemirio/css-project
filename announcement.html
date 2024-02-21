@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Announcement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* header styling starts here */
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .tom {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .jax {
+        background-color: black;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #jax1 {
+        color: aliceblue;
+      }
+      .button {
+        background-color: rgb(199, 33, 33);
+        width: 200px;
+        color: aliceblue;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 20px;
+        border: 50px;
+      }
+      .list {
+        background-color: rgb(199, 33, 33);
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      li {
+        list-style: none;
+        color: aliceblue;
+      }
+      .john {
+        display: flex;
+        color: aliceblue;
+        gap: 30px;
+      }
+      a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      /* header styling ends here */
+      .covid {
+        border: 1px solid black;
+        color: aliceblue;
+        background-color: black;
+        height: 100px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        padding-left: 30px;
+        margin-top: 160px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+      .heading {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        padding-left: 30px;
+        margin-top: 20px;
+        display: block;
+      }
+      .heading2 {
+        margin-bottom: 10px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        padding-left: 30px;
+        font-size: 15px;
+        padding-bottom: 20px;
+      }
+      li :hover {
+        background-color: black;
+        border: 4px solid black;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- header styling started here -->
+      <div class="tom">
+        <div class="jax">
+          <p id="jax1">
+            <button class="button">
+              <a target="_self" href="announcement.html">Announcement</a>
+            </button>
+            <a href="index.html">How were responding to COVID-19 </a>
+          </p>
+        </div>
+        <div class="VAL">
+          <div class="list">
+            <a href="index.html">
+              <img
+                src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg"
+                alt=""
+              />
+            </a>
+            <!-- navigation bar -->
+            <nav>
+              <ul class="john">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- introduction of the cart logo and styling -->
+                <li
+                  style="
+                    height: 5pxpx;
+                    border: 1px solid black;
+                    height: 30px;
+                    background-color: black;
+                  "
+                >
+                  <a href="cart.html">
+                    <img
+                      src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e86146bb854797d12a30a13_cart.svg"
+                      width="30px"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="covid">
+        <p>
+          <span style="font-size: 40px">How we're responding to COVID-19</span>
+        </p>
+      </div>
+    </header>
+    <!-- header styling ends here -->
+    <div style="margin-top: 10px">
+      <h1 style="font-size: 30px" class="heading">
+        What’s a Rich Text element?
+      </h1>
+      <p class="heading2">
+        The rich text element allows you to create and format headings,
+        paragraphs, blockquotes, images, and video all in one place instead of
+        having to add and format them individually. Just double-click and easily
+        create content.
+      </p>
+      <h2 class="heading">Static and dynamic content editing</h2>
+      <p class="heading2">
+        A rich text element can be used with static or dynamic content. For
+        static content, just drop it into any page and begin editing. For
+        dynamic content, add a rich text field to any collection and then
+        connect a rich text element to that field in the settings panel. Voila!
+      </p>
+      <h3 class="heading">How to customize formatting for each rich text</h3>
+      <p class="heading2">
+        Headings, paragraphs, blockquotes, figures, images, and figure captions
+        can all be styled after a class is added to the rich text element using
+        the "When inside of" nested selector system.
+      </p>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div
+        style="
+          border: 1px solid black;
+          background-color: black;
+          color: aliceblue;
+          display: flex;
+          gap: 1100px;
+          margin-top: 10px;
+          padding-top: 60px;
+          padding-left: 20px;
+        "
+        class="foot1"
+      >
+        <div>
+          <h2><a style="color: rgb(255, 241, 241)" href="">ACME</a></h2>
+        </div>
+
+        <div style="display: flex; gap: 20px" class="icons">
+          <a style="color: rgb(248, 238, 238)" href=""
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <!-- Facebook icon -->
+          <a style="color: rgb(248, 236, 236)" href=""
+            ><i class="fab fa-whatsapp fa-2x"></i
+          ></a>
+          <!-- WhatsApp icon -->
+          <a style="color: rgb(241, 234, 234)" href=""
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <!-- Instagram icon -->
+        </div>
+      </div>
+      <p
+        style="
+          display: flex;
+          justify-content: center;
+          background-color: black;
+          color: aliceblue;
+        "
+      >
+        Made In <span style="color: brown">Webflow</span>.
+        <span>&copy; 2020.</span>
+      </p>
+    </footer>
+  </body>
+</html>
